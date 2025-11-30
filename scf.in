@@ -1,0 +1,32 @@
+&CONTROL
+  calculation = 'scf'
+  pseudo_dir = '../pseudo/'
+  outdir = './tmp/'
+  prefix = 'SiGe'
+  tprnfor = .true.
+  tstress = .true.
+/
+&SYSTEM
+  ibrav = 4
+  a = 3.95
+  c = 15.0
+  nat = 2
+  ntyp = 2
+  ecutwfc = 40
+  ecutrho = 320      
+  occupations = 'smearing'
+  smearing = 'mv'
+  degauss = 0.01
+/
+&ELECTRONS
+  mixing_beta = 0.7
+  conv_thr = 1.0d-8
+/
+ATOMIC_SPECIES
+ Si  28.0855  Si.upf
+ Ge  72.6300  Ge.upf
+ATOMIC_POSITIONS (crystal)
+ Si  0.333333333  0.666666666  0.48
+ Ge  0.666666666  0.333333333  0.52
+K_POINTS (automatic)
+ 12 12 1 0 0 0
